@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+</head>
+<body>
+
+    <!-- FLOATING HEARTS BACKGROUND -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- SECTION 1: HERO / LANDING PAGE -->
+    <section class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <div class="hero-heart">❤️</div>
+            <h1 class="hero-title">Happy Valentine's Day ❤️</h1>
+            <p class="hero-subtitle">I made something special for you...</p>
+            <button class="btn-surprise" onclick="openSurprise()">
+                Open My Surprise 💌
+            </button>
+        </div>
+        <div class="sparkles">
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+            <span class="sparkle">✨</span>
+        </div>
+    </section>
+
+    <!-- MAIN VALENTINE CONTENT -->
+    <div class="valentine-content" id="valentineContent">
+
+        <!-- SECTION 2: LOVE LETTER -->
+        <section class="love-letter-section">
+            <div class="section-container">
+                <h2 class="section-title">💌 To Someone Special ❤️</h2>
+
+                <div class="letter-card">
+                    <div class="letter-header">
+                        <span>🌹</span><span>💕</span><span>🌹</span>
+                    </div>
+
+                    <div class="letter-body">
+                        <p class="letter-greeting">My Dearest Special Someone,</p>
+                        <p class="letter-text">
+                            You make ordinary days feel a little more special. Every moment with you is a treasure I hold close to my heart. You are the reason I believe in magic, and I am so grateful that you exist in my world.
+                        </p>
+
+                        <!-- Hidden extended message -->
+                        <div class="letter-extended" id="letterExtended">
+                            <p class="letter-text">
+                                From the first time we talked, I knew there was something extraordinary about you. Your warmth, your kindness, your beautiful soul — everything about you makes the world a better place. Thank you for being you, for being loving, and for being the most wonderful person I have ever known. You are loved more than words could ever express! 💕
+                            </p>
+                        </div>
+
+                        <button class="btn-read-more" id="btnReadMore" onclick="toggleReadMore()">
+                            Read More 💕
+                        </button>
+
+                        <p class="letter-signature">
+                            With all my love,<br>
+                            <strong>Your Valentine</strong> 💗
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MEMORIES / GALLERY -->
+        <section class="memories-section">
+            <div class="section-container">
+                <h2 class="section-title">Our Little Memories 📸</h2>
+                <p class="section-subtitle">Every moment with you is a treasure</p>
+
+                <div class="memories-grid">
+
+                    <!-- Memory Card 1 -->
+                    <div class="memory-card">
+                        <div class="memory-image-wrapper" onclick="openLightbox('images/photo1.jpg', 'Our First Memory')">
+                            <img src="images/photo1.jpg" alt="Our First Memory" class="memory-image" onerror="this.src='images/placeholder.svg'">
+                            <div class="memory-overlay"><span>🔍 View</span></div>
+                        </div>
+                        <div class="memory-info">
+                            <h3 class="memory-title">Our First Memory</h3>
+                            <p class="memory-desc">A beautiful day that I will always remember. The start of something truly special.</p>
+                            <span class="memory-date">📅 September 8, 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Memory Card 2 -->
+                    <div class="memory-card">
+                        <div class="memory-image-wrapper" onclick="openLightbox('images/photo2.jpg', 'That Special Day')">
+                            <img src="images/photo2.jpg" alt="That Special Day" class="memory-image" onerror="this.src='images/placeholder.svg'">
+                            <div class="memory-overlay"><span>🔍 View</span></div>
+                        </div>
+                        <div class="memory-info">
+                            <h3 class="memory-title">That Special Day</h3>
+                            <p class="memory-desc">Laughter, smiles, and a moment frozen in time. This is one of my favorites.</p>
+                            <span class="memory-date">📅 October 15, 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Memory Card 3 -->
+                    <div class="memory-card">
+                        <div class="memory-image-wrapper" onclick="openLightbox('images/photo3.jpg', 'A Day to Remember')">
+                            <img src="images/photo3.jpg" alt="A Day to Remember" class="memory-image" onerror="this.src='images/placeholder.svg'">
+                            <div class="memory-overlay"><span>🔍 View</span></div>
+                        </div>
+                        <div class="memory-info">
+                            <h3 class="memory-title">A Day to Remember</h3>
+                            <p class="memory-desc">Some days are just perfect. This was one of them. I would relive it a thousand times.</p>
+                            <span class="memory-date">📅 December 25, 2026</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: REASONS YOU'RE SPECIAL -->
+        <section class="reasons-section">
+            <div class="section-container">
+                <h2 class="section-title">Reasons You're Special 💗</h2>
+                <p class="section-subtitle">Just a few of the million reasons</p>
+
+                <div class="reasons-grid">
+                    <div class="reason-card"><span class="reason-emoji">😊</span><p class="reason-text">Your beautiful smile</p></div>
+                    <div class="reason-card"><span class="reason-emoji">🌷</span><p class="reason-text">Your endless kindness</p></div>
+                    <div class="reason-card"><span class="reason-emoji">✨</span><p class="reason-text">Your adorable laugh</p></div>
+                    <div class="reason-card"><span class="reason-emoji">❤️</span><p class="reason-text">Your amazing personality</p></div>
+                    <div class="reason-card"><span class="reason-emoji">💖</span><p class="reason-text">The way you care about others</p></div>
+                    <div class="reason-card"><span class="reason-emoji">💕</span><p class="reason-text">The memories we share together</p></div>
+                    <div class="reason-card"><span class="reason-emoji">🌟</span><p class="reason-text">Your strength and courage</p></div>
+                    <div class="reason-card"><span class="reason-emoji">🥰</span><p class="reason-text">Simply being you</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: VALENTINE'S QUESTION -->
+        <section class="question-section" id="questionSection">
+            <div class="section-container">
+                <div class="question-card" id="questionCard">
+                    <div class="question-hearts">
+                        <span>💖</span><span>💕</span><span>💖</span>
+                    </div>
+                    <h2 class="question-title">Will you be my Valentine? 💖</h2>
+                    <p class="question-subtitle">I really hope you say yes...</p>
+
+                    <div class="question-buttons">
+                        <button class="btn-yes" onclick="clickedYes()">YES ❤️</button>
+                        <button class="btn-no" id="btnNo">NO 😭</button>
+                    </div>
+
+                    <p class="dodge-message" id="dodgeMessage"></p>
+                </div>
+
+                <!-- Celebration Card -->
+                <div class="celebration" id="celebration">
+                    <div class="celebration-content">
+                        <h2 class="celebration-title">YAY! ❤️ You said YES!</h2>
+                        <div class="celebration-heart">💕</div>
+                        <p class="celebration-text">You just made this Valentine's Day extra special. 💕</p>
+                        <div class="celebration-emojis">
+                            <span>🎉</span><span>❤️</span><span>🥳</span><span>💕</span><span>✨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="Memory">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- CONFETTI CANVAS -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
